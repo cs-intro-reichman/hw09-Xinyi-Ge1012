@@ -56,7 +56,7 @@ public class List {
        Node current = first;
        int index = 0;
        while(current != null){
-       if(current.cd.equals(chr)){
+       if(current.cp.equals(chr)){
            return index;
        }
        current = current.next;
@@ -74,7 +74,7 @@ public class List {
         for(int i = 0; i < indexOf(chr); i++){
             current = current.next;
         }
-        current.cd.count++;
+        current.cp.count++;
       } else {
         addFirst(chr);
       }
@@ -86,7 +86,7 @@ public class List {
     public boolean remove(char chr) {
         Node current = first;
         Node per = null;
-        while(current != null && current.cd.chr != chr){
+        while(current != null && current.cp.chr != chr){
             per = current;
             current = current.next;
         }
@@ -114,7 +114,7 @@ public class List {
        for(int i = 0; i < index; i++){
         current = current.next;
        }
-       return current.cd;
+       return current.cp;
     }
 
     /** Returns an array of CharData objects, containing all the CharData objects in this list. */
@@ -123,7 +123,7 @@ public class List {
 	    Node current = first;
 	    int i = 0;
         while (current != null) {
-    	    arr[i++]  = current.cd;
+    	    arr[i++]  = current.cp;
     	    current = current.next;
         }
         return arr;
