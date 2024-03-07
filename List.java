@@ -29,8 +29,8 @@ public class List {
 
     /** GIVE Adds a CharData object with the given character to the beginning of this list. */
     public void addFirst(char chr) {
-      CharData Data = new CharData(chr);
-      Node newNode = new Node(Data, first);
+      CharData cd = new CharData(chr);
+      Node newNode = new Node(cd, first);
       first = newNode;
       size++;  
     }
@@ -111,7 +111,7 @@ public class List {
         throw new IndexOutOfBoundsException("Index out of bounds");
        }
        Node current = first;
-       for(int i = 0; 1 < index; i++){
+       for(int i = 0; i < index; i++){
         current = current.next;
        }
        return current.cd;
